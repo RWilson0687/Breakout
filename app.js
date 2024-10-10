@@ -1,3 +1,24 @@
+/*
+This code snippet is part of a JavaScript implementation for a simple game called "Breakout." Here's a breakdown of what each part does:
+
+Element Selection:
+    const grid = document.querySelector ('.grid'): This selects the HTML element with the class grid, which likely serves as the game area or playing field.
+    const scoreDisplay = document.querySelector ('#score'): This selects the element with the ID score, where the player's score will be displayed.
+
+Constants for Game Dimensions:
+
+    const blockWidth = 100: This sets the width of each block (or brick) in the game.
+    const blockHeight = 20: This sets the height of each block.
+    const ballDiameter = 20: This sets the diameter of the ball used in the game.
+    const boardWidth = 560: This defines the width of the game board.
+    const boardHeight = 300: This defines the height of the game board.
+
+
+
+
+
+
+*/
 const grid = document.querySelector ('.grid')
 const scoreDisplay = document.querySelector ('#score')
 const blockWidth = 100
