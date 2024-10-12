@@ -1,4 +1,4 @@
-/* This code is a JavaScript implementation for a simple game called "Breakout." */
+//This code is a JavaScript implementation for a simple game called "Breakout."
 const grid = document.querySelector ('.grid')
 const scoreDisplay = document.querySelector ('#score')
 const blockWidth = 100
@@ -31,7 +31,7 @@ Summary:
     Further implementation includes handling user input, ball movement, collision detection, and displaying the players score.
 */
 
-/* User Start Position: This code sets up the initial positions for a user-controlled object (a paddle) and a ball. */
+//User Start Position: This code sets up the initial positions for a user-controlled object (a paddle) and a ball.
 const userStart = [230, 10]
 let currentPosition = userStart
 
@@ -75,7 +75,7 @@ Summary:
     The properties define the coordinates of each corner, which can be used for collision detection and rendering on a game canvas.
 */
 
-/* All my blocks: This code creates an array of Block objects, which are part of a game environment similar to "Brick Breaker" or "Pong." */
+//All my blocks: This code creates an array of Block objects, which are part of a game environment similar to "Brick Breaker" or "Pong."
 const blocks = [
     new Block(10,270),
     new Block(120,270),
@@ -110,7 +110,7 @@ Summary:
     Each block's position is defined by its x and y coordinates, which are passed to the Block class constructor.
 */
 
-/* drag my block: This code defines a function called addBlock that creates visual representations of the blocks in a game. */
+//drag my block: This code defines a function called addBlock that creates visual representations of the blocks in a game.
 function addBlock () {
 
 for (let i = 0; i < blocks.length; i++) {
@@ -144,7 +144,7 @@ Summary:
     This setup is essential for gameplay, as it visually represents the targets or obstacles that players will interact with.
 */
 
-/* add user: This code creates and displays a user-controlled object (a paddle) in game. */
+//add user: This code creates and displays a user-controlled object (a paddle) in game.
 const user = document.createElement ('div')
 user.classList.add('user')
 drawUser()
@@ -165,7 +165,7 @@ Summary:
     This setup is crucial for user interaction in the game.
 */
 
-/* draw the user: The drawUser function is responsible for positioning the user-controlled object (a paddle) on the game grid. */
+//draw the user: The drawUser function is responsible for positioning the user-controlled object (a paddle) on the game grid.
 function drawUser() {
     user.style.left = currentPosition[0] + 'px'
     user.style.bottom = currentPosition[1] + 'px'
@@ -184,7 +184,7 @@ Summary
     This function would typically be called whenever the user’s position needs to be updated, such as in response to user input or during game updates.
 */
 
-/* draw the ball: The drawUser function updates the position of the user element on the game grid according to the coordinates stored in currentPosition. */
+//draw the ball: The drawUser function updates the position of the user element on the game grid according to the coordinates stored in currentPosition.
 function drawBall() {
     ball.style.left = ballCurrentPosition[0] + 'px'
     ball.style.bottom = ballCurrentPosition[1] + 'px'
@@ -203,7 +203,7 @@ Summary
     This function is typically called whenever the ball’s position changes, such as during the game loop or in response to collision detection and movement logic.
 */
 
-/* move user: The drawBall function updates the position of the ball on the game grid according to the coordinates stored in ballCurrentPosition. */
+//move user: The drawBall function updates the position of the ball on the game grid according to the coordinates stored in ballCurrentPosition.
 function moveUser(e) {
     switch(e.key){
         case 'ArrowLeft':
@@ -267,7 +267,7 @@ Summary
     The function supports both arrow keys and the 'A' and 'D' keys for flexibility in control.
 */
 
-/* add ball: This code creates and displays the ball in the game environment. */
+//add ball: This code creates and displays the ball in the game environment.
 const ball = document.createElement('div')
 ball.classList.add('ball')
 drawBall()
@@ -288,7 +288,7 @@ Summary
     This setup is essential for the gameplay mechanics, as the ball will be a central element in the game’s interaction and movement.
 */
 
-/* move the ball: The moveBall function handles the movement of the ball within the game. */
+//move the ball: The moveBall function handles the movement of the ball within the game.
 function moveBall() {
     ballCurrentPosition[0] += xDirection
     ballCurrentPosition[1] += yDirection
@@ -317,7 +317,8 @@ Summary
     This function is called in a game loop to create the continuous movement of the ball.
 */
 
-/* check for collisions: The checkForCollisions function is responsible for detecting various types of collisions in the game, such as collisions with blocks, walls, the user-controlled paddle, and game over conditions. */
+//check for collisions: The checkForCollisions function is responsible for detecting various types of collisions in the game.
+//Such includes collisions with blocks, walls, the user-controlled paddle, and game over conditions.
 function checkForCollisions() {
 
     //check for block collisions
@@ -409,7 +410,7 @@ Summary:
     It also manages win and lose conditions, making it a critical part of the game's logic and flow.
 */
 
-/* Change Ball Direction: The changeDirection function is responsible for altering the movement direction of the ball when it collides with different objects in the game. */
+//Change Ball Direction: The changeDirection function is responsible for altering the movement direction of the ball when it collides with different objects in the game.
 function changeDirection() {
         if (xDirection === 2 && yDirection === 2){
             yDirection = -2
