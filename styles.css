@@ -1,3 +1,35 @@
+/* Ensure the body takes the full viewport height and centers content */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Game container is centered both horizontally and vertically */
+.game-container {
+    position: absolute;
+    width:560px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: black;
+    border: 5px solid white;
+}
+
+/* Score styling */
+#score {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: white;
+}
+
 .grid {
     position: absolute;
     width:560px;
