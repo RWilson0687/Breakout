@@ -6,6 +6,7 @@ const blockHeight = 20
 const ballDiameter = 20
 const boardWidth = 560
 const boardHeight = 300
+const gameTitle = "Breakout"
 let timerID
 let xDirection = -2
 let yDirection = 2
@@ -220,6 +221,13 @@ function moveUser(e) {
             }
             break;
 
+        case moveLeft:
+            if (currentPosition[0] < boardWidth - blockWidth) {
+                currentPosition[0] +=10
+                drawUser()
+            }
+            break;
+
         case 'a':
             if (currentPosition[0] > 0) {
                 currentPosition[0] -= 10
@@ -236,7 +244,30 @@ function moveUser(e) {
     }
 }
 
+// Function to move the user left via the button click
+function moveLeft() {
+    if (currentPosition[0] > 0) {
+        currentPosition[0] -= 10;  // Move left
+        drawUser();
+    }
+}
+
+// Function to move the user right via the button click
+function moveRight() {
+    if (currentPosition[0] > 0) {
+        currentPosition[0] += 10;  // Move left
+        drawUser();
+    }
+}
+
 document.addEventListener('keydown', moveUser)
+
+// Add event listener for the Move Left button click
+document.getElementById("moveLeft").addEventListener("click", moveLeft);
+
+// Add event listener for the Move Left button click
+document.getElementById("moveRight").addEventListener("click", moveRight);
+
 /*
 Function Definition:
     function moveUser(e) {: This defines a function named moveUser, which takes an event object e as an argument.

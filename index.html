@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="styles.css"></link>
 </head>
 <body>
+    <div id="pageContainer">
+        <h1 id="gameTitle">Breakout</h1>
+        <div id="gameArea">
+            <div id="gameDescription">A fun game of bouncing balls and breaking bricks!</div>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div id="navigationPane">Navigation Pane</div>
+        </div>
+        <div id="gameButtons">
+            <button>Start Game</button>
+            <button>Pause</button>
+            <button>Restart</button>
+        </div>
+                <!-- Second row of buttons for movement -->
+                <div class="buttonRow">
+                    <button id="moveLeft">Move Left ("W" or "<")</button>
+                    <button id="moveRight">Move Right ("L" or ">")</button>
+                </div>
+    </div>
     <div class="game-container">
         <div id="score">0</div>
         <div class="grid"></div>
