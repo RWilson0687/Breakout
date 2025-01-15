@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #282c34;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
     color: white;
     background: url(BG.jpg);
     background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
 /* Centered title */
 #gameTitle {
     font-size: 36px;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
     color: white;
     text-align: center;
     margin-bottom: 20px; /* Space below the title */
@@ -35,9 +35,9 @@ body {
 /* Game area setup */
 #gameArea {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Left pane, canvas, right pane */
+    grid-template-columns: 1fr auto 1fr; /* Left pane, right pane */
     gap: 20px; /* Space between columns */
-    align-items: center;
+    align-items: center=;
     justify-content: center;
     margin-bottom: 20px; /* Space below the game area */
 }
@@ -46,20 +46,18 @@ body {
 #gameDescription {
     font-size: 18px;
     color: white;
-    text-align: right;
+    text-align: center; /* Horizontally center the text */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100%; /* Ensure the container has a defined height */
 }
 
 /* Navigation pane on the right */
 #navigationPane {
     font-size: 18px;
-    color: white;
+    color: rgb(162, 0, 255);
     text-align: left;
-}
-
-/* Game canvas */
-#gameCanvas {
-    border: 2px solid white;
-    background-color: black;
 }
 
 /* Buttons below the game area */
@@ -69,21 +67,24 @@ body {
 }
 
 #gameButtons button {
+    background-color: #f874d0;
     font-size: 16px;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
     padding: 10px 20px;
     cursor: pointer;
 }
 
 /* Optional: Style for the movement buttons */
 #moveLeft, #moveRight {
-    background-color: #ffffff; /* Add a distinct color */
+    background-color: #fc3cc2; /* Add a distinct color */
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
 }
 
-#moveLeft:hover, #moveRight:hover {
+#moveLeft:hover, #moveRight:hover, #startGameButton:hover, #pauseButton:hover, #restart-button:hover {
     background-color: #0056b3; /* Darker shade on hover */
 }
 
@@ -119,14 +120,14 @@ body {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blue;
+    background-color: rgba(168, 41, 253, 0.637);
 }
 
 .user {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: crimson;
+    background-color: rgb(220, 20, 193);
 }
 
 .ball{
@@ -134,5 +135,73 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: crimson;
+    background-color: rgb(220, 20, 193);
 }
+
+
+
+/* Remove bullet points and add spacing */
+.navigationPane {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+/* Styling for list items */
+.navigationPane li {
+    padding: 10px 20px; /* Adds padding for a cleaner look */
+    margin: 5px 0; /* Adds spacing between items */
+    background-color: #000000; /* Adds a background color */
+    border-radius: 5px; /* Adds rounded corners */
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for list items */
+.navigationPane li:hover {
+    background-color: #0056b3; /* Changes background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Styling for links */
+.navigationPane li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets link text color */
+    font-weight: bold; /* Makes the text bold */
+    display: block; /* Makes the entire list item clickable */
+    text-align: center; /* Centers the link text */
+    font-size: 18px; /* Adjusts the font size */
+}
+
+/* Hover effect for links */
+.navigationPane li a:hover {
+    color: #ffcc00; /* Changes text color on hover */
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+
+
+#navigationPane h3 {
+    font-size: 24px; /* Adjust the font size */
+    color: #ffffff; /* White color for contrast */
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Optional: Make all letters uppercase */
+    margin-bottom: 10px; /* Add some space below the heading */
+    border-bottom: 2px solid #ffffff; /* Optional: Add an underline */
+    padding-bottom: 5px; /* Add padding for spacing */
+    background-color: #0056b3; /* Dark blue background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    font-size: 20px;
+    color: #ffcc00; /* Gold color */
+    text-align: center;
+    font-size: 24px;
+    background: linear-gradient(90deg, #ffffff, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+

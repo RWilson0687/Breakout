@@ -5,25 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breakout</title>
     <link rel="stylesheet" href="styles.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="pageContainer">
         <h1 id="gameTitle">Breakout</h1>
         <div id="gameArea">
-            <div id="gameDescription">A fun game of bouncing balls and breaking bricks!</div>
-            <canvas id="gameCanvas" width="800" height="600"></canvas>
-            <div id="navigationPane">Navigation Pane</div>
+            <div id="gameDescription">A fun game of bouncing balls and breaking bricks! You can move the paddle with "A" and "D", the arrow keys, or the buttons below.</div>
+            <canvas id="gameCanvas" width="700" height="500"></canvas>
+            <div id="navigationPane">
+                <h3>
+                    <span style="margin-right: 5px;">🎮</span>Other Games<span style="margin-right: 5px;">🎮</span>
+                </h3>
+                <ul class="navigationPane">
+                    <li>
+                        <a href="https://rwilson0687.github.io/Breakout/">Breakout</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/ConnectFour/">Connect Four</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/Frogger/">Frogger</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/MemoryGame/">Memory Game</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/RockPaperScissors/">Rock, Paper, Scissors</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/SpaceInvaders/">Space Invaders</a>
+                    </li>
+                    <li>
+                        <a href="https://rwilson0687.github.io/Whack-A-Mole/">Whack-A-Mole</a>
+                    </li>
+            </div>
         </div>
         <div id="gameButtons">
-            <button>Start Game</button>
-            <button>Pause</button>
-            <button>Restart</button>
+            <button id="startGameButton">Start Game</button>
+            <button id="pauseButton">Pause</button>
+            <button id="restart-button" onclick="refreshPage()">Restart</button>
         </div>
-                <!-- Second row of buttons for movement -->
-                <div class="buttonRow">
-                    <button id="moveLeft">Move Left ("W" or "<")</button>
-                    <button id="moveRight">Move Right ("L" or ">")</button>
-                </div>
+        <!-- Second row of buttons for movement -->
+        <div class="buttonRow">
+            <button id="moveLeft">Move Left ("W" or "<"")</button>
+            <button id="moveRight">Move Right ("L" or ">")</button>
+        </div>
     </div>
     <div class="game-container">
         <div id="score">0</div>
