@@ -17,13 +17,10 @@ let yDirection = 2
 let score = 0
 let paused = false; // Tracks whether the game is paused
 
-//NEW
-
 //Function to refresh the page
 function refreshPage() {
     location.reload(); // Reloads the page
 }
-
 
 // Function to toggle the game state (pause/resume)
 function pauseGame() {

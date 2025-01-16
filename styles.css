@@ -20,7 +20,7 @@ body {
     align-items: center;
     margin: 0 auto;
     padding: 20px;
-    max-width: 1200px; /* Set a maximum width for the page */
+    max-width: 100%; /* Set a maximum width for the page */
 }
 
 /* Centered title */
@@ -53,11 +53,12 @@ body {
     height: 100%; /* Ensure the container has a defined height */
 }
 
-/* Navigation pane on the right */
-#navigationPane {
-    font-size: 18px;
-    color: rgb(162, 0, 255);
-    text-align: left;
+/* Heading for game description */
+.game-description h3 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Buttons below the game area */
@@ -138,7 +139,12 @@ body {
     background-color: rgb(220, 20, 193);
 }
 
-
+/* Navigation pane on the right */
+#navigationPane {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
 
 /* Remove bullet points and add spacing */
 .navigationPane {
@@ -179,29 +185,9 @@ body {
     text-decoration: underline; /* Optional: Adds underline on hover */
 }
 
-
 #navigationPane h3 {
-    font-size: 24px; /* Adjust the font size */
-    color: #ffffff; /* White color for contrast */
-    text-align: center; /* Center the heading */
-    text-transform: uppercase; /* Optional: Make all letters uppercase */
-    margin-bottom: 10px; /* Add some space below the heading */
-    border-bottom: 2px solid #ffffff; /* Optional: Add an underline */
-    padding-bottom: 5px; /* Add padding for spacing */
-    background-color: #0056b3; /* Dark blue background */
-    color: white;
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners */
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
-    font-size: 20px;
-    color: #ffcc00; /* Gold color */
-    text-align: center;
-    font-size: 24px;
-    background: linear-gradient(90deg, #ffffff, #feb47b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
+    text-align: center; /* Centers the text */
+    margin: 0 0 10px 0; /* Adds some spacing below the title */
+    font-size: 1.5rem; /* Adjust font size for better visibility */
+    color: white; /* Ensure consistent color */
 }
-
